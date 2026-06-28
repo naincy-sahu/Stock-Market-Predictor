@@ -1,4 +1,4 @@
-print("Training AI Model...")
+
 from utils.data_loader import load_data
 from utils.preprocessing import preprocess_data
 from utils.indicators import add_moving_average
