@@ -15,7 +15,7 @@ data = add_moving_average(data)
 
 data = data.dropna()
 
-# 👇 Ye code yahin likhna hai
+
 X = data[
     [
         "Open",
