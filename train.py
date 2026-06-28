@@ -1,4 +1,6 @@
-import joblibfrom utils.data_loader import load_data
+joblib.dump(model, "models/saved_model.pkl")
+
+print("Model Saved Successfully")import joblibfrom utils.data_loader import load_data
 from utils.preprocessing import preprocess_data
 from utils.indicators import add_moving_average
 
