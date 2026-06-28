@@ -17,7 +17,7 @@ model = joblib.load("models/saved_model.pkl")
 # User input
 ma_10 = float(input("Enter 10 Day Moving Average: "))
 
-# DataFrame banao
+# DataFrame 
 input_data = pd.DataFrame({
     "MA_10": [ma_10]
 })
