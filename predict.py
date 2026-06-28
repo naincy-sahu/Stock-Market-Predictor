@@ -1,4 +1,14 @@
-import joblib
+X = data[
+    [
+        "Open",
+        "High",
+        "Low",
+        "Volume",
+        "MA_10"
+    ]
+]
+
+y = data["Close"]import joblib
 import pandas as pd
 
 # Saved model load karo
