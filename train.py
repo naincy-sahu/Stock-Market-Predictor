@@ -1,25 +1,9 @@
-
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.ensemble import RandomForestRegressor
-
-...
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-model = RandomForestRegressor(
-    n_estimators=100,
-    random_state=42
-)
-
-model.fit(X_train, y_train)
-
 from utils.data_loader import load_data
 from utils.preprocessing import preprocess_data
 from utils.indicators import add_moving_average
 
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 import joblib
 
@@ -30,14 +14,18 @@ data = preprocess_data(data)
 data = add_moving_average(data)
 data = data.dropna()
 
-X = data[["Open","High","Low","Volume","MA_10"]]
+X = data[["Open", "High", "Low", "Volume", "MA_10"]]
 y = data["Close"]
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-model = LinearRegression()
+model = RandomForestRegressor(
+    n_estimators=100,
+    random_state=42
+)
+
 model.fit(X_train, y_train)
 
 predictions = model.predict(X_test)
