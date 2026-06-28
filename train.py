@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 import joblib
 
-stock = "AAPL"
+stock = STOCK
 
 data = load_data(stock)
 data = preprocess_data(data)
