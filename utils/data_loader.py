@@ -14,8 +14,4 @@ def load_data(stock):
     except Exception as e:
         logger.error(f"Error: {e}")
 
-        return Noneimport yfinance as yf
-
-def load_data(stock):
-    data = yf.download(stock)
-    return data
+        return None
