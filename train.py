@@ -28,8 +28,8 @@ data = create_features(data)
 # Remove Missing Values
 data = data.dropna()
 
-# Input Features
-X = data[
+# Input Feature 
+    X = data[
     [
         "Open",
         "High",
@@ -40,11 +40,10 @@ X = data[
         "Price_Range",
         "Open_Close_Diff",
         "Volume_Change",
-        "RSI",
-        "EMA_10"
+        "EMA_10",
+        "MACD"
     ]
 ]
-
 # Target
 y = data["Close"]
 
