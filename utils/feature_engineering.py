@@ -15,5 +15,16 @@ def create_features(data):
         span=10,
         adjust=False
     ).mean()
+    data["EMA_12"] = data["Close"].ewm(
+    span=12,
+    adjust=False
+).mean()
+
+data["EMA_26"] = data["Close"].ewm(
+    span=26,
+    adjust=False
+).mean()
+
+data["MACD"] = data["EMA_12"] - data["EMA_26"]
 
     return data
